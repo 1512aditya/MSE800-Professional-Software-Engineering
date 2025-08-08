@@ -1,10 +1,10 @@
 import random
 
-def RandomWords():
-    words = ("python", "random", "easy", "MSE800")
+words = ("python", "random", "easy", "MSE800")
+
+def RandomWords():    
     correct = random.choice(words)
     attempt = 3
-    
     
     print("""
     Welcome to WORD Game!!!
