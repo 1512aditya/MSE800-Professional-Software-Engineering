@@ -1,6 +1,6 @@
 from conn import get_connection
 from course import list_courses_with_students, list_courses_with_teachers
-from student import get_student_by_id
+from student import get_student_by_id,add_student,delete_student
 from database import setup_database
 from report import show_all_data
 
@@ -11,7 +11,9 @@ def menu():
         print("2: Which teacher is connected to which course")
         print("3: Search a student by ID")
         print("4: FULL DATA REPORT")
-        print("5: Exit")
+        print("5: Add Student")
+        print("6: Delete Student")
+        print("7: Exit")
 
         choice = input("Enter your choice: ")
 
@@ -41,7 +43,17 @@ def menu():
             print("\n--- FULL DATA REPORT ---")
             for row in show_all_data():
                 print(row)
+
         elif choice == "5":
+            student_id = input("Enter Student ID: ")
+            name = input("Enter Student Name: ")
+            add_student(student_id, name)
+
+        elif choice == "6":
+            student_id = input("Enter Student ID to delete: ")
+            delete_student(student_id)
+
+        elif choice == "7":
             print("Exiting...")
             break
 
