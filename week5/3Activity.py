@@ -48,8 +48,8 @@ class GeneralStaff(Person):
 
 def main():
     student = Student("Alice", "123 Street", 20, "S001", "A+ in MSE")
-    academic = AcademicStaff("Prof. ABC", "4 Nile road", 45, "A001", "TX123", 75000)
-    staff = GeneralStaff("Charlie", "9 Road", 35, "G001", "TX456", 25.5)
+    academic = AcademicStaff("Prof. ABC", "4 Nile road", 45, "h001", "M-77123", 60000)
+    staff = GeneralStaff("Adi", "9 xyz", 40, "l003", "M-3336", 30.5)
 
     # Displaying information
     print("\nStudent Details")
@@ -64,4 +64,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
     
